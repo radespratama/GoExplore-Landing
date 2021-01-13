@@ -1,0 +1,25 @@
+@import '../../assets/scss/variable-custom';
+
+.stars{
+    position: relative;
+    min-width: 200px;
+    display: inline-flex;
+    .star{
+        position: absolute;
+        display: inline-flex;
+        mask: url('../../assets/dist/icon/Star.svg') no-repeat center left;
+        &:not(.placeholder){
+            z-index: 2;
+            background-color: $yellow;
+        }
+        &.placeholder{
+            z-index: 1;
+            background-color: $gray-200;
+        }
+    }
+}
+
+.testimonial-hero, .testimonial-hero img {
+    width: 365px; height: 500px;
+}
+
