@@ -1,0 +1,3 @@
+export const FETCH_PAGE = "FETCH_PAGE";
+export const CHECKOUT_BOOKING = "CHECKOUT_BOOKING";
+export const LOADING_START = "LOADING_START"

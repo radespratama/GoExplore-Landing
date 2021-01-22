@@ -1,0 +1,46 @@
+@import '../../../assets/scss/variable-custom';
+
+.input-number {
+    .input-group {
+        background-color: $white;
+        
+    .input-group-text {
+        border: 0;
+        cursor: pointer;
+        color: $white;
+        padding: 0;
+        border-radius: 4px !important;
+        font-size: 24px;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        user-select: none;
+        &.minus {
+            background-color: $red;
+            transition: 0.8s;
+            &:hover{
+                background-color: $red-2;
+            }
+        }
+        &.plus {
+            background-color: $teal;
+            transition: 0.8s;
+            &:hover{
+                background-color: $teal-2;
+            }
+        }
+    }
+
+    input.form-control {
+        min-height: 45px;
+        border: 0;
+        border-radius: 0;
+        outline: 0;
+        box-shadow: none;
+        background-color: $gray-100;
+        padding: 0.575rem 1rem;
+        text-align: center;
+        }
+    }
+}

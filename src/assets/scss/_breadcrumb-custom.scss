@@ -1,0 +1,43 @@
+@import 'variable-custom';
+$breadcrumb-slice: quote("/");
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    list-style: none;
+    background-color: $white;
+}
+  
+  .breadcrumb-item {
+      a {
+        color: $gray-500;
+      }
+        display: flex;
+  
+    // The separator between breadcrumbs (by default, a forward-slash: "/")
+    + .breadcrumb-item {
+      padding-left: 1.2rem;
+      color: $gray-500;
+      content: escape-svg($breadcrumb-slice);
+  
+      &::before {
+        display: inline-block; // Suppress underlining of the separator in modern browsers
+        padding-right: 1.2rem;
+        color: $dark;
+      }
+    }
+    + .breadcrumb-item:hover::before {
+      text-decoration: underline;
+    }
+    + .breadcrumb-item:hover::before {
+      text-decoration: none;
+    }
+  
+    &.active {
+      color: $dark;
+    }
+  }
+  

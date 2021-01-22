@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import React from 'react'
 
 import Star from 'elements/Star'
 import Button from 'elements/Button';
@@ -8,17 +6,12 @@ import Button from 'elements/Button';
 import TestimonyAccent from 'assets/dist/images/testimonial-frame.png';
 
 export default function Testimonial({ data }) {
-
-    useEffect(()=> {
-        AOS.init()
-    }, [])
-
     return (
         <section className="container testimonial-container" data-aos="fade-down" data-aos-duration="800" data-aos-delay="800">
             <div className="row align-items-center">
                 <div className="col-auto" style={{ marginRight: 60 }}>
                     <div className="testimonial-hero" style={{ margin: `30px 0 0 30px` }}>
-                        <img src={data?.imageUrl} alt={data?.name} className="position-absolute" style={{ zIndex:1 }}/>
+                        <img src={data?.imageUrl ? `${process.env.REACT_APP_HOST}/${data?.imageUrl}` : ""} alt={data?.name} className="position-absolute" style={{ zIndex:1 }}/>
                         <img src={TestimonyAccent} alt="Testimonial Frame" className="position-absolute" style={{ margin: `-30px 0 0 -30px`, zIndex:0 }}/>
                     </div>
                 </div>

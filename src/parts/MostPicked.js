@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Button from 'elements/Button'
 
-import AOS from 'aos'
-import 'aos/dist/aos.css';
-
 export default function MostPicked(props) {
-
-    useEffect(() => {
-        AOS.init()
-    }, [])
     return (
         <section className="container mostpicked-container" ref={props.refMostPicked}>
             <div className="row align-items-center justify-content-center">
@@ -24,7 +17,7 @@ export default function MostPicked(props) {
                 {
                     props?.data?.map((picked, index) => {
                         return (
-                            <div className={`item column-4${index === 0 ? ' row-2' : ' row-1'}`} key={`${index}-${picked?.name}`}>
+                            <div className={`item column-4${index === 0 ? ' row-2' : ' row-1'}`} key={`${index}-${picked?.title}`}>
 
                                 <div className="card card-featured" data-aos="fade-down" data-aos-duration="700" data-aos-delay={400 * index}>
                                     <div className="tag">
@@ -32,12 +25,12 @@ export default function MostPicked(props) {
                                         <span className="font-weight-light">per{" "}{picked?.unit ?? 'D'}</span>
                                     </div>
                                     <figure className="img-wrapper">
-                                        <img src={picked?.imageUrl} alt={picked?.name} className="img-cover"/>
+                                        <img src={picked?.imageId[0] ? `${process.env.REACT_APP_HOST}/${picked?.imageId[0]?.imageUrl}` : ""} alt={picked?.title} className="img-cover"/>
                                     </figure>
                                     <div className="meta-wrapper">
                                         <Button className="streched-link d-block text-white" type="link" href={`/details/${picked?._id}`}>
                                             <h5>
-                                                {picked?.name ?? 'Name Destination'}
+                                                {picked?.title ?? 'Name Destination'}
                                             </h5>
                                         </Button>
                                         <span>

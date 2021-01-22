@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import React from 'react'
 
 import HeroImage from 'assets/dist/images/Case.png'
 import Travelers from 'assets/dist/icon/Travelers.svg';
@@ -18,16 +16,12 @@ export default function Hero(props) {
             behavior: "smooth"
         })
     }
-
-    useEffect(() => {
-        AOS.init()
-    }, [])
     
     const dataJson = props.data
     return (
         <section className="container hero-container">
             <div className="row align-items-center justify-content-center">
-                <div className="col-md-6">
+                <div className="col-md-6" data-aos="fade-down" data-aos-duration="900">
                     <h1 className="hero-title line-height-1 mb-3" data-aos="fade-down" data-aos-duration="900">
                         Life is either a daring 
                         adventure or Nothing!
@@ -36,7 +30,7 @@ export default function Hero(props) {
                         The way up to the top of the mountain is always <br />
                         longer than you think. Don't fool yourself.
                     </p>
-                    <Button className="btn-show btn-start px-5" data-aos="fade-down" hasShadow onClick={showMostPicked}>
+                    <Button className="btn-show btn-start px-5" hasShadow onClick={showMostPicked}>
                         More Destination
                     </Button>
 

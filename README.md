@@ -35,12 +35,6 @@ Sebelum menggunakan repo yang sudah di clone, gunakan perintah
 untuk mengunduh node_modules dan depedencies di package.json nya.
 
 
-## Update Repository
-
-Saat projek ini ada update kalian bisa menggunakan perintah
-`git pull` untuk mengupdate repository yang sudah diunduh.
-
-
 ## Note
 
 - Projek yang saya buat open source dan mungkin jika temen-temen

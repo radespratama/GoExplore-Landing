@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css';
+import React from 'react'
 
 import { Link } from "react-router-dom";
 import propTypes from "prop-types";
 
 export default function Button(props) {
 
-    useEffect(() => {
-        AOS.init()
-    }, [])
-
     const className = [props.className];
-    if (props.isPrimary) className.push("btn-primary");
+    if (props.isPrimary) className.push("btn-custom-dark");
     if (props.isLight) className.push("btn-light");
     if (props.isLarge) className.push("btn-lg");
     if (props.isSmall) className.push("btn-sm");
@@ -72,7 +66,6 @@ export default function Button(props) {
         className={className.join(" ")}
         style={props.style}
         onClick={onClick}
-        data-aos="fade-down" data-aos-duration="900" data-aos-delay="600"
         >
         {props.children}
         </button>

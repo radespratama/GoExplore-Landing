@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React from 'react'
 
 import Button from 'elements/Button'
 import BrandIcon from 'parts/IconText'
@@ -10,9 +8,18 @@ export default function Header(props) {
         return props.location.pathname === path ? ' active' : ''
     }
 
-    useEffect(() => {
-        AOS.init()
-    }, [])
+    if(props.isCentered)
+        return (
+            <header className="spacing-sm" data-aos="fade-down" data-aos-duration="500">
+                <div className="container">
+                    <nav className="navbar navbar-expand-lg navbar-light">
+                        <Button className="brand-text-icon mx-auto" href="" type="link">
+                            Go<span className="text-gray-900">Explore.</span>
+                        </Button>
+                    </nav>
+                </div>
+            </header>
+        )
 
     return (
         <header className="spacing-sm" data-aos="fade-down" data-aos-duration="800">

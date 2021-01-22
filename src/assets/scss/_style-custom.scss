@@ -49,6 +49,20 @@ section {
 .btn-shadow {
     box-shadow: 0 8px 15px rgba($color: $indigo, $alpha: 0.1);
 }
+.btn-custom-dark {
+    background-color: $dark;
+    padding: 6px 12px;
+    color: #fff;
+    transition: .3s ease-in-out;
+    &:hover {
+        color: #fff;
+        background-color: lighten($dark, 15%);
+    }
+}
+.text-gray-500 {
+    color: $gray-500;
+}
+// End Universal
 // Icon Text
 .brand-text-icon{
     font-size: 23px;
@@ -66,7 +80,8 @@ section {
 header {
     width: 100%;
     position: relative;
-    margin-bottom: 50px;
+    border-bottom: 1px solid $gray-300;
+    margin-bottom: 40px;
     .navbar {
         padding: 15px 0;
 
@@ -151,7 +166,9 @@ header {
     color: $gray-500;
 }
 .card {
-    height: 100%;
+    &.bordered {
+        border: 1px solid $gray-300;
+    }
     border: none;
     border-radius: 15px;
     .tag {
@@ -301,4 +318,51 @@ footer {
         font-weight: 300;
         color: $gray-500;
     }
+}
+
+// Part 2
+main.main-description {
+    .title-desc {
+        color: $dark;
+    }
+    .desc-color {
+        font-size: 15px;
+        color: darken($gray-500, 20%);
+        font-weight: 300;
+    }
+}
+.pageDetailTitle {
+    h1 {
+        color: $dark;
+    }
+    .text-gray-500 {
+        color: $gray-500;
+    }
+}
+.card-custom {
+    h4 {
+        color: $dark;
+    }
+    h5.text-teal {
+        color: $teal-2;
+    }
+}
+// Meta Checkout
+.meta-style {
+    h1.h2 {
+        color: $dark;
+    }
+    p.lead {
+        color: $gray-500;
+        font-size: 16px;
+    }
+}
+// Checkout
+.error-title {
+    color: $dark;
+    font-weight: 600;
+}
+.error-desc {
+    font-size: 14px;
+    color: $gray-500;
 }

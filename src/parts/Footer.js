@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import Button from 'elements/Button'
 import IconText from 'parts/IconText'
 import Badge from 'assets/dist/images/google-play-badge.png'
 
 export default function Footer() {
+    // Fungsi Dinamic Copyright Year
+    const [date, setDate] = useState()
+    const getYear = () => setDate(new Date().getFullYear())
+
+    useEffect(() => {
+        getYear()
+    }, [])
+
     return (
         <footer>
             <div className="container">
@@ -66,7 +74,7 @@ export default function Footer() {
                 </div>
                 <div className="row align-items-center justify-content-center">
                     <div className="col-md-6 text-center copyrights">
-                        Copyright 2020 • All rights reserved • GoExplore
+                        Copyright <span>{date}</span> • All rights reserved • GoExplore
                     </div>
                 </div>
             </div>
