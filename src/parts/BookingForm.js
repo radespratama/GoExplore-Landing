@@ -81,7 +81,7 @@ class bookingForm extends Component {
     
     render() {
         const { data } = this.state;
-        const { itemDetails, startBooking } = this.props;
+        const { itemDetails } = this.props;
 
         return (
             <div className="card bordered card-custom" style={{ padding: "60px 80px" }}>
