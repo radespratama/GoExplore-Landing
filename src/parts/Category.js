@@ -3,6 +3,7 @@ import React from 'react'
 import Button from 'elements/Button'
 
 export default function Category({data}) {
+
     return (
         data?.map((categories, index2) => {
             if(categories?.itemId?.length === 0) return null
@@ -38,7 +39,7 @@ export default function Category({data}) {
                                     )
                                 })
                             }
-                        </div>
+                    </div>
                 </section>
             )
         })

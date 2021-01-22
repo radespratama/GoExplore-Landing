@@ -273,6 +273,9 @@ header {
 
 }
 .testimonial-container {
+    .col-style {
+        margin-right: 40px;
+    }
     h4.title-name,
     h5.title-message {
         color: $dark;

@@ -27,7 +27,7 @@ export default function Hero(props) {
                         adventure or Nothing!
                     </h1>
                     <p className="mb-4 hero-desc font-weight-light text-gray-500 w-75" data-aos="fade-down" data-aos-duration="900" data-aos-delay="500">
-                        The way up to the top of the mountain is always <br />
+                        The way up to the top of the mountain is always <br className="breakline" />
                         longer than you think. Don't fool yourself.
                     </p>
                     <Button className="btn-show btn-start px-5" hasShadow onClick={showMostPicked}>
@@ -35,7 +35,7 @@ export default function Hero(props) {
                     </Button>
 
                     <div className="row mt-5 data-items" data-aos="fade-down" data-aos-duration="900" data-aos-delay="700">
-                        <div className="col-auto mx-2">
+                        <div className="col-auto mx-1">
                             <img src={Travelers} width="30" alt="Icon Traveler"/>
                             <h6 className="mt-2">
                                 {NumberFormat(dataJson?.travelers)} <span className="font-weight-light text-gray-500">
@@ -43,7 +43,7 @@ export default function Hero(props) {
                                 </span>
                             </h6>
                         </div>
-                        <div className="col-auto mx-2">
+                        <div className="col-auto mx-1">
                             <img src={Treasure} width="30" alt="Icon Treasure"/>
                             <h6 className="mt-2">
                                 {NumberFormat(dataJson?.treasures)} <span className="font-weight-light text-gray-500">
@@ -51,7 +51,7 @@ export default function Hero(props) {
                                 </span>
                             </h6>
                         </div>
-                        <div className="col-auto mx-2">
+                        <div className="col-auto mx-1">
                             <img src={Cities} width="30" alt="Icon Cities"/>
                             <h6 className="mt-2">
                                 {NumberFormat(dataJson?.cities)} <span className="font-weight-light text-gray-500">

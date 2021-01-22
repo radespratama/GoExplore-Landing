@@ -1,0 +1,50 @@
+// Header 
+@media (max-width: 576px) {
+    section {
+        margin-bottom: 55px;
+    }
+    .brand-text-icon {
+        margin-left: 20px;
+    }
+    .navbar-toggler {
+        margin-right: 20px;
+        border: none;
+    }
+
+    .hero-container {
+        h1.hero-title {
+            font-size: 32px;
+        }
+        .hero-image,
+        .breakline {
+        display: none;
+        }
+        .btn-show {
+            padding: 10px 12px;
+        }
+    }
+    .agency-container {
+        display: none;
+    }
+    .mostpicked-container {
+        .container-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .categories-container {
+        .container-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .testimonial-container {
+        .col-style {
+            display: none;
+        }
+        .testimonial-hero {
+            img {
+                width: 300px;
+                height: 400px;
+            }
+        }
+    }
+}
